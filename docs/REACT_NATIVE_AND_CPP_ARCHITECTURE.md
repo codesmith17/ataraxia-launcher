@@ -156,3 +156,4 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstack-protector-strong -D_FORTIFY_SOUR
 ```
 
 This ensures that running `nm`, `objdump`, or decompilers like Ghidra on `libminimalistcore.so` produces no exposed function names, no readable strings, and completely flattened control flow logic.
+

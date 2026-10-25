@@ -176,3 +176,4 @@ To prevent social media apps from breaking heuristics when updating view IDs, th
 1. **Never stores plain-text strings** in the binary. All strings are stored as encrypted byte arrays (AES-128 or XOR + bit-shift hash).
 2. **Fuzzy Class Name Analysis:** Evaluates view hierarchy patterns (e.g. view depth, aspect ratio 9:16, layout parameters) in addition to resource IDs.
 3. **OTA Heuristic Rule Updates:** The React layer can download updated JSON signature patterns without requiring a complete app recompile.
+
