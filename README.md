@@ -1,4 +1,4 @@
-# Minimalist Phone Launcher (React + Golang Architecture)
+# Ataraxia Launcher (React + Golang Architecture)
 
 An open-source, **100% on-device (zero external server)**, privacy-first digital wellbeing Android launcher engineered to eliminate doom-scrolling, neutralize addictive short-form video loops, and transform smartphones into calm, intentional tools.
 

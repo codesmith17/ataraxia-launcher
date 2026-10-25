@@ -1,4 +1,4 @@
-package com.minimalist.launcher.data.model
+package com.ataraxia.launcher.data.model
 
 data class AppItem(
     val packageName: String,

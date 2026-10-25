@@ -13,5 +13,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "minimalist-phone-launcher"
+rootProject.name = "ataraxia-launcher"
 include(":app")

@@ -1,6 +1,6 @@
 # 100% On-Device & Zero-Server Architecture Guarantee
 
-This document formalizes the **Zero-Server / Fully Autonomous On-Device Architecture** for the Minimalist Phone Launcher. 
+This document formalizes the **Zero-Server / Fully Autonomous On-Device Architecture** for the Ataraxia Launcher. 
 
 **Core Guarantee:** The entire application operates **100% locally on the device**. There are **no external servers, no cloud endpoints, no backend proxies, and no remote dependencies**. The launcher functions with total feature parity even in perpetual **Airplane Mode**.
 
@@ -75,7 +75,7 @@ Instead of pinging a remote AI server to categorize videos:
 
 ### 3. Notification Filter (No Remote Sync)
 - Intercepted notifications from noisy apps are handled completely by `NotificationListenerService`.
-- Notifications are stored locally in an on-device encrypted database (`/data/user/0/com.minimalist.launcher/databases/notifications.db`).
+- Notifications are stored locally in an on-device encrypted database (`/data/user/0/com.ataraxia.launcher/databases/notifications.db`).
 - The user reads them through the local React interface. No notification data is ever transmitted externally.
 
 ### 4. License & Entitlements (Zero Verification Calls)
@@ -101,3 +101,4 @@ To verify that the application has zero external server communication:
 3. **Airplane Mode Test:**
    - Put device in Airplane Mode.
    - All features (Reels blocker, Shorts blocker, Reddit video swiper, YouTube Edu filter, custom timers, and schedules) function with 100% uptime.
+

@@ -1,6 +1,6 @@
 # Permissions & Security Architecture Deep-Dive
 
-This document details every single Android permission requested by the Minimalist Phone Launcher (`com.qqlabs.minimalistlauncher`), explaining **why it is required**, the **underlying Android framework APIs**, and how each permission is used.
+This document details every single Android permission requested by the Ataraxia Launcher (`com.qqlabs.minimalistlauncher`), explaining **why it is required**, the **underlying Android framework APIs**, and how each permission is used.
 
 ---
 
@@ -71,7 +71,7 @@ This document details every single Android permission requested by the Minimalis
   - When the user exits the app back to the launcher or switches to a utility app (e.g. Maps/Camera), the daltonizer is turned back off (`0`).
   - *Granting via ADB:*
     ```bash
-    adb shell pm grant com.minimalist.launcher android.permission.WRITE_SECURE_SETTINGS
+    adb shell pm grant com.ataraxia.launcher android.permission.WRITE_SECURE_SETTINGS
     ```
 
 ---
@@ -113,5 +113,5 @@ This document details every single Android permission requested by the Minimalis
 
 In our open-source replication:
 1. **No External Network Calls:** The app requires no analytics endpoints (`INTERNET` permission is completely optional or omitted).
-2. **Local Database Only:** All notification logs, usage statistics, and custom configurations remain strictly inside private app storage (`/data/data/com.minimalist.launcher/databases/`).
+2. **Local Database Only:** All notification logs, usage statistics, and custom configurations remain strictly inside private app storage (`/data/data/com.ataraxia.launcher/databases/`).
 3. **No Advertising IDs:** Unlike commercial builds that include `com.google.android.gms.permission.AD_ID` and install referrer SDKs, this implementation contains **zero tracking SDKs**.

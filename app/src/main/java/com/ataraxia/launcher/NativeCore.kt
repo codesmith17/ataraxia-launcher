@@ -1,9 +1,9 @@
-package com.minimalist.launcher
+package com.ataraxia.launcher
 
 object NativeCore {
     init {
         try {
-            System.loadLibrary("minimalistcore")
+            System.loadLibrary("ataraxiacore")
         } catch (e: UnsatisfiedLinkError) {
             // Fallback if native library is compiled separately
         }

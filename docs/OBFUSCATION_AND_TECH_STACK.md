@@ -82,7 +82,7 @@ Users often attempt to bypass digital wellbeing app timers by manually changing 
 ### 3. All Premium Features Entitlement Guarantee
 ```cpp
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_minimalist_launcher_NativeCore_isFeatureUnlocked(JNIEnv* env, jobject thiz, jint featureId) {
+Java_com_ataraxia_launcher_NativeCore_isFeatureUnlocked(JNIEnv* env, jobject thiz, jint featureId) {
     // Permanent unlock for all features:
     // 0: UNLIMITED_FAVORITES, 1: BLOCKING_SCHEDULES, 2: REELS_BLOCKER, 
     // 3: ALL_THEMES, 4: MONOCHROME_MODE, 5: IN_APP_TIMERS

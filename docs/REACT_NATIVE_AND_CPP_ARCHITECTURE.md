@@ -24,7 +24,7 @@ This document details the software architecture for building the Minimalist Laun
                                         │
 ┌───────────────────────────────────────▼────────────────────────────────┐
 │                    NATIVE C++ / GO COMPILED ENGINE                     │
-│                       (libminimalistcore.so)                           │
+│                       (libataraxiacore.so)                           │
 │                                                                        │
 │   ┌────────────────────────────────────────────────────────────────┐   │
 │   │                  Security & Obfuscation Core                   │   │
@@ -66,7 +66,7 @@ This document details the software architecture for building the Minimalist Laun
 ## 📂 Proposed Codebase Organization
 
 ```
-minimalist-phone-launcher/
+ataraxia-launcher/
 ├── package.json                       # React Native dependencies
 ├── src/                               # 100% React / TypeScript UI
 │   ├── index.tsx                      # Root App Component
@@ -120,7 +120,7 @@ Unlike legacy React Native bridges that convert everything to JSON strings acros
 
 ```typescript
 // src/bridge/NativeCoreBridge.ts
-export interface NativeMinimalistCore {
+export interface NativeAtaraxiaCore {
   // Evaluates whether a view should be blocked (Reels, Shorts, Reddit Video)
   evaluateView(packageName: string, viewId: string, contentDesc: string): boolean;
 
@@ -134,15 +134,15 @@ export interface NativeMinimalistCore {
   isPremiumUnlocked(featureId: number): boolean;
 }
 
-declare const MinimalistCore: NativeMinimalistCore;
-export default MinimalistCore;
+declare const AtaraxiaCore: NativeAtaraxiaCore;
+export default AtaraxiaCore;
 ```
 
 ---
 
 ## 🔒 Build & Obfuscation Flags (C++ Clang / NDK)
 
-When building `libminimalistcore.so`, the following compiler and linker flags are applied in `CMakeLists.txt`:
+When building `libataraxiacore.so`, the following compiler and linker flags are applied in `CMakeLists.txt`:
 
 ```cmake
 # Maximum performance & symbol stripping
@@ -155,5 +155,5 @@ set(CMAKE_SHARED_LINKER_FLAGS "${CMAKE_SHARED_LINKER_FLAGS} -Wl,--gc-sections -W
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -fstack-protector-strong -D_FORTIFY_SOURCE=2")
 ```
 
-This ensures that running `nm`, `objdump`, or decompilers like Ghidra on `libminimalistcore.so` produces no exposed function names, no readable strings, and completely flattened control flow logic.
+This ensures that running `nm`, `objdump`, or decompilers like Ghidra on `libataraxiacore.so` produces no exposed function names, no readable strings, and completely flattened control flow logic.
 

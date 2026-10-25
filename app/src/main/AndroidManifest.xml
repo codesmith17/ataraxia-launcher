@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.minimalist.launcher">
+    package="com.ataraxia.launcher">
 
     <!-- Essential Launcher Permissions -->
     <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" tools:ignore="QueryAllPackagesPermission" />
@@ -21,7 +21,7 @@
     <uses-permission android:name="android.permission.WRITE_SECURE_SETTINGS" tools:ignore="ProtectedPermissions" />
 
     <application
-        android:name=".MinimalistApplication"
+        android:name=".AtaraxiaApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -61,7 +61,7 @@
 
         <!-- Short Video Blocker & Lock Gestures Accessibility Service -->
         <service
-            android:name=".service.MinimalistAccessibilityService"
+            android:name=".service.AtaraxiaAccessibilityService"
             android:exported="true"
             android:label="@string/accessibility_service_label"
             android:permission="android.permission.BIND_ACCESSIBILITY_SERVICE">
@@ -91,7 +91,7 @@
 
         <!-- Device Admin Receiver for Double-Tap Screen Lock -->
         <receiver
-            android:name=".receiver.MinimalistDeviceAdminReceiver"
+            android:name=".receiver.AtaraxiaDeviceAdminReceiver"
             android:exported="true"
             android:label="@string/device_admin_label"
             android:description="@string/device_admin_description"

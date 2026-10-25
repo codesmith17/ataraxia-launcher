@@ -1,7 +1,7 @@
 # Architecture: Pure React + Golang Native Engine
 ## (Zero Kotlin in UI — High-Performance Obfuscation & Security with Go)
 
-This document establishes the architecture for developing the Minimalist Phone Launcher exclusively using **React / React Native for the user interface** and **Golang (Go 1.23+) for the native core engine, anti-tamper obfuscation, heuristics, and background services**.
+This document establishes the architecture for developing the Ataraxia Launcher exclusively using **React / React Native for the user interface** and **Golang (Go 1.23+) for the native core engine, anti-tamper obfuscation, heuristics, and background services**.
 
 ---
 
@@ -72,7 +72,7 @@ This document establishes the architecture for developing the Minimalist Phone L
 ## 📂 Codebase Directory Organization
 
 ```
-minimalist-phone-launcher/
+ataraxia-launcher/
 ├── package.json                   # React Native dependencies
 ├── src/                           # 100% React / TypeScript UI
 │   ├── index.tsx                  # App entry point

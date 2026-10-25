@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.22.1)
 
-project("minimalistcore")
+project("ataraxiacore")
 
 add_library(
-    minimalistcore
+    ataraxiacore
     SHARED
     native_core.cpp
 )
@@ -14,6 +14,6 @@ find_library(
 )
 
 target_link_libraries(
-    minimalistcore
+    ataraxiacore
     ${log-lib}
 )

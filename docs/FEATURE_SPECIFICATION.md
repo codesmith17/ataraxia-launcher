@@ -1,6 +1,6 @@
 # Feature Specification & Technical Implementation Guide
 
-This specification details the technical implementation, algorithmic state machines, and data contracts for replicating all core and premium features of the Minimalist Phone Launcher.
+This specification details the technical implementation, algorithmic state machines, and data contracts for replicating all core and premium features of the Ataraxia Launcher.
 
 ---
 
@@ -117,7 +117,7 @@ data class FilteredNotification(
 ### Mechanism
 Requires one-time ADB permission grant:
 ```bash
-adb shell pm grant com.minimalist.launcher android.permission.WRITE_SECURE_SETTINGS
+adb shell pm grant com.ataraxia.launcher android.permission.WRITE_SECURE_SETTINGS
 ```
 
 ### Implementation

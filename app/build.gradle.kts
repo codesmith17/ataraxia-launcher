@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.minimalist.launcher"
+    namespace = "com.ataraxia.launcher"
     compileSdk = 34
 
     defaultConfig {
-        applicationId = "com.minimalist.launcher"
+        applicationId = "com.ataraxia.launcher"
         minSdk = 26
         targetSdk = 34
         versionCode = 1

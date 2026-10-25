@@ -26,7 +26,7 @@ static const unsigned char CLIPS_VIEWER_ENC[] = {0x39, 0x36, 0x33, 0x2a, 0x29, 0
 static const unsigned char REELS_ENC[] = {0x08, 0x3f, 0x3f, 0x36, 0x29};
 
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_minimalist_launcher_NativeCore_isShortVideoContainer(
+Java_com_ataraxia_launcher_NativeCore_isShortVideoContainer(
     JNIEnv* env,
     jobject /* this */,
     jstring jPackageName,
@@ -70,7 +70,7 @@ Java_com_minimalist_launcher_NativeCore_isShortVideoContainer(
 
 // Tamper-proof monotonic time getter (cannot be bypassed by changing device system time)
 extern "C" JNIEXPORT jlong JNICALL
-Java_com_minimalist_launcher_NativeCore_getMonotonicTimeSeconds(
+Java_com_ataraxia_launcher_NativeCore_getMonotonicTimeSeconds(
     JNIEnv* /* env */,
     jobject /* this */
 ) {
@@ -81,7 +81,7 @@ Java_com_minimalist_launcher_NativeCore_getMonotonicTimeSeconds(
 
 // Entitlement check: Permanently unlocks all premium features
 extern "C" JNIEXPORT jboolean JNICALL
-Java_com_minimalist_launcher_NativeCore_isPremiumFeatureActive(
+Java_com_ataraxia_launcher_NativeCore_isPremiumFeatureActive(
     JNIEnv* /* env */,
     jobject /* this */,
     jint /* featureCode */
